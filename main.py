@@ -217,46 +217,50 @@
 #   print("Hra byla prohrána. :( ")
 
 
-import random
+# import random
 
-def vytiskni_smajlika(nalada:bool)-> str:
-  # returns string - emoticon
-  # args: nalada(bool): happy = True, sad = False
-  #returns: str: emoticon
+# def vytiskni_smajlika(nalada:bool)-> str:
+#   # returns string - emoticon
+#   # args: nalada(bool): happy = True, sad = False
+#   #returns: str: emoticon
 
-  smajlik = ""
+#   smajlik = ""
 
-  if nalada:
-    smajlik = ":)"
-  else:
-    smajlik = ":("
+#   if nalada:
+#     smajlik = ":)"
+#   else:
+#     smajlik = ":("
 
-  return smajlik
+#   return smajlik
 
-hledane_cislo = random.randint (1,100)
-uhodnuto = False
-tipnuta_cisla = []
+# hledane_cislo = random.randint (1,100)
+# uhodnuto = False
+# tipnuta_cisla = []
 
-for iterace in range (3):
-  print(f"Začátek kola {iterace + 1}")
-  cislo = int(input("Řekni prosím číslo:\n"))
-  tipnuta_cisla.append(cislo)
+# for iterace in range (3):
+#   print(f"Začátek kola {iterace + 1}")
+#   cislo = int(input("Řekni prosím číslo:\n"))
+#   tipnuta_cisla.append(cislo)
 
-  if hledane_cislo == cislo:
-    print ("Číslo bylo uhodnuto.")
-    print(vytiskni_smajlika(True))
-    uhodnuto = True
-    break
-  elif hledane_cislo < cislo:
-    print("Tipnuté číslo bylo větší než číslo hádané.")
-    print(vytiskni_smajlika(False))
-  else:
-    print("Tipnuté číslo bylo menší než číslo hádané.")
-    print(vytiskni_smajlika(False))
+#   if hledane_cislo == cislo:
+#     print ("Číslo bylo uhodnuto.")
+#     print(vytiskni_smajlika(True))
+#     uhodnuto = True
+#     break
+#   elif hledane_cislo < cislo:
+#     print("Tipnuté číslo bylo větší než číslo hádané.")
+#     print(vytiskni_smajlika(False))
+#   else:
+#     print("Tipnuté číslo bylo menší než číslo hádané.")
+#     print(vytiskni_smajlika(False))
 
-print(f"Uživatel tipoval následující čísla: {tipnuta_cisla}")
-print(f"Hledané číslo bylo: {hledane_cislo}")
-if uhodnuto:
-    print("Hra byla vyhrána! :) ")
-else:
-  print("Hra byla prohrána. :( ")
+# print(f"Uživatel tipoval následující čísla: {tipnuta_cisla}")
+# print(f"Hledané číslo bylo: {hledane_cislo}")
+# if uhodnuto:
+#     print("Hra byla vyhrána! :) ")
+# else:
+#   print("Hra byla prohrána. :( ")
+
+with open("text.txt", "r") as soubor:
+  obsah_souboru = soubor.read()
+  print(obsah_souboru)
